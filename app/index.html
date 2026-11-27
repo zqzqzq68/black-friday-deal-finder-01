@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrueCut — Black Friday deals, checked for real</title>
+<meta name="description" content="Black Friday and Cyber Monday deals an agent found and price-checked on 27 November 2026, with an honest verdict on each one.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Black Friday &middot; Cyber Monday 2026</p>
+    <h1>TrueCut</h1>
+    <p class="tagline">Real deals, checked today. No inflated &ldquo;was&rdquo; prices.</p>
+    <p class="checked-line">Every price below was verified in a deals source that names the store, on <strong>27 November 2026</strong>. Prices move fast &mdash; always confirm at checkout.</p>
+  </div>
+</header>
+
+<main>
+  <section class="summary" id="summary" aria-label="Sale summary">
+    <div class="stat"><span class="stat-num" id="stat-count">&ndash;</span><span class="stat-label">deals checked</span></div>
+    <div class="stat"><span class="stat-num" id="stat-avg">&ndash;</span><span class="stat-label">average discount</span></div>
+    <div class="stat"><span class="stat-num" id="stat-save">&ndash;</span><span class="stat-label">total savings if you bought one of each</span></div>
+    <div class="stat"><span class="stat-num" id="stat-best">&ndash;</span><span class="stat-label">deepest genuine cut</span></div>
+  </section>
+
+  <section class="controls" aria-label="Search and filter deals">
+    <label class="search-label" for="search">Search deals
+      <input id="search" type="search" placeholder="Try &ldquo;AirPods&rdquo;, &ldquo;LEGO&rdquo;, &ldquo;TV&rdquo;&hellip;" autocomplete="off">
+    </label>
+    <div class="chips" id="category-chips" role="group" aria-label="Category"></div>
+    <div class="selects">
+      <label for="store">Store
+        <select id="store">
+          <option value="all">All stores</option>
+          <option value="Amazon">Amazon</option>
+          <option value="Best Buy">Best Buy</option>
+          <option value="Target">Target</option>
+          <option value="Home Depot">Home Depot</option>
+        </select>
+      </label>
+      <label for="discount">Discount
+        <select id="discount">
+          <option value="0">Any discount</option>
+          <option value="20">20% off or more</option>
+          <option value="30">30% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </label>
+      <label for="sort">Sort by
+        <select id="sort">
+          <option value="verdict">Best verdict first</option>
+          <option value="pct">Biggest % off</option>
+          <option value="save">Biggest $ saving</option>
+          <option value="price">Lowest sale price</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <p class="result-line" id="result-line" aria-live="polite"></p>
+  <section class="grid" id="deal-grid" aria-label="Deals"></section>
+  <p class="empty" id="empty" hidden>No deals match. Loosen a filter or clear the search.</p>
+
+  <section class="method">
+    <h2>How we check a deal</h2>
+    <ol>
+      <li><strong>Find it in a source that names the store.</strong> Every price here comes from the store&rsquo;s own listing as reported by an independent deals roundup, never from a guess.</li>
+      <li><strong>Do the maths.</strong> The discount on each card is computed from the two prices shown. If they don&rsquo;t add up, the deal doesn&rsquo;t ship.</li>
+      <li><strong>Judge the &ldquo;was&rdquo; price.</strong> A strikethrough that was never a selling price is flagged, not celebrated. Two TV deals below carry that warning.</li>
+      <li><strong>Call it honestly.</strong> <span class="pill pill-newlow">New low</span> means the lowest price reported yet. <span class="pill pill-strong">Strong deal</span> is a deep cut on a real selling price. <span class="pill pill-good">Good deal</span> is worth it if you wanted the item. <span class="pill pill-modest">Modest</span> is a small saving. <span class="pill pill-flag">Check the reference</span> means the reference price is inflated.</li>
+    </ol>
+    <p class="method-note">Sale windows: Amazon Black Friday Week runs 19&ndash;30 November; Best Buy 19&ndash;28 November; Target 22&ndash;29 November; Walmart 23&ndash;29 November. Nintendo&rsquo;s Switch 2 bundle price runs 22 November&ndash;5 December. Apple itself cuts no prices &mdash; it offers gift cards 27&ndash;30 November instead, which is why the Apple deals here are all at Amazon.</p>
+  </section>
+</main>
+
+<footer>
+  <p>TrueCut is an independent checker built for make.fun&rsquo;s Black Friday deal finder bounty. It is not affiliated with Amazon, Best Buy, Target, Walmart, Home Depot, Apple, Sony, Nintendo, Dyson, LEGO or any store named here. Product and store names belong to their owners. Store links go to the store&rsquo;s own search for the product.</p>
+  <p>All prices in US dollars, as reported 9&ndash;26 November 2026 and re-verified 27 November 2026.</p>
+</footer>
+</body>
+</html>
